@@ -28,7 +28,8 @@
     
     
     ?>
-    <button><a href="javascript:history.back()">Voltar</a>
+    <button><a href="javascript:history.back(-1)">Go Back</a>
+
     </button>
     </form>
 </section>
