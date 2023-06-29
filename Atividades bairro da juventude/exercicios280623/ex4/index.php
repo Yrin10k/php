@@ -68,18 +68,29 @@ input{
 </head>
 <body>
 <?php 
-$v1=$_POST['v1'];
-$v2=$_POST['v2'];
 
- function expoente(){
-for ($i=0; $i < ; $i++) { 
-    # code...
+
+
+function expoente($v1,$v2){
+
+$fiel = 1;
+for ($i=0; $i < $v2; $i++) { 
+ 
+    $fiel=$fiel*$v1;
+   
+    
+    
+    
 }
+
+return $fiel;
 }
+
+  
 ?>
 
    <div class="topo"> <h1 class="titulo-main">
-   Expoente sem Função Local
+   Expoente sem Função Nativa do PHP
  </h1>
     </div>
     <div class="meio">
@@ -98,21 +109,18 @@ for ($i=0; $i < ; $i++) {
 
        </form>
       
-       <div class="resultado">
-          
- 
-<?php
+    <div class="resultado">
+    <?php 
+$base=$_POST['v1'];
+$expoente=$_POST['v2'];
+ $fiel2 = expoente($base,$expoente);
 
  
-
+echo number_format($fiel2,'0',',','.');
  
- 
-
-?>
-
-
-         
-</div>
+?> 
+   
+    </div>
     </div>
 </body>
 </html>
